@@ -38,6 +38,9 @@
 		"coverage": [
 			"@php ./vendor/bin/phpunit --coverage-text --coverage-html=coverage && echo coverage/index.html"
 		],
+		"coverage-ci": [
+			"@php ./vendor/bin/phpunit"
+		],
 		"cs": [
 			"@php ./vendor/bin/phpcs"
 		],
