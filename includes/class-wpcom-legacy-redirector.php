@@ -360,12 +360,8 @@ class WPCOM_Legacy_Redirector {
 	 */
 	public static function vip_legacy_redirect_check_if_public( $excerpt ) {
 		$post_types = get_post_types();
+		$post_obj   = get_page_by_path( $excerpt, OBJECT, $post_types );
 
-		if ( function_exists( 'wpcom_vip_get_page_by_path' ) ) {
-			$post_obj = wpcom_vip_get_page_by_path( $excerpt, OBJECT, $post_types );
-		} else {
-			$post_obj = get_page_by_path( $excerpt, OBJECT, $post_types );
-		}
 		if ( ! is_null( $post_obj ) ) {
 			if ( 'publish' !== get_post_status( $post_obj->ID ) ) {
 				return 'private';
