@@ -5,7 +5,6 @@
  * Description: Simple plugin for handling legacy redirects in a scalable manner.
  * Version: 1.4.0-alpha
  * Requires PHP: 7.4
- * Requires at least: 6.1
  * Author: Automattic / WordPress VIP
  * Author URI: https://wpvip.com
  *
